@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     font-feature-settings: "palt";
+    
 }
 #header {
     height: 100%;
     object-position: center;
 }
 #header .logo {
-    
+    font-family: Ailerons;
     text-align: center;
     color: rgb(114, 121, 84);
     text-shadow:-12px 13px 1px rgba(107, 114, 96, 0.2);
@@ -53,7 +54,7 @@ body {
 
 #menu {
     padding-top: 20px;
-    
+    font-family: Ailerons;
 }
 #menu ul{
     
@@ -112,6 +113,7 @@ body {
     transition:0.3s all;
 }
 #sec2 .sec-head {
+    font-family: Ailerons;
     border-top: thick double rgb(115, 124, 90);
     padding-top: 80px;
     margin: 0 0 80px;
@@ -140,6 +142,7 @@ figure {
     border-top: thick double rgb(115, 124, 90);
 }
 #sec3 .sec-head {
+    font-family: Ailerons;
     font-size: 34px;
     margin-bottom: 80px;
     text-shadow:-5px 6px 1px rgba(169, 175, 164, 0.5);
@@ -157,6 +160,7 @@ figure {
     border-top: thick double rgb(115, 124, 90);
 }
 #sec4 .sec-head {
+    font-family: Ailerons;
     text-align:  center;
     font-size: 37px;
     font-weight: bold;
@@ -221,50 +225,7 @@ figure {
     transform-origin: 48% 52%;
     animation: rotation 8s infinite linear;
 }
-.circle4,
-.circle5,
-.circle6 {
-    
-    margin-top: 150rem;
-    margin-left: -30rem;
-    position: absolute; /* 縁取り要素は絶対配置 */
-    top: 0; /* .profile-photoの開始位置と揃える */
-    width: 100%;
-    height: 100%;
-    border-radius: 200%; /* 40%の角丸めで歪な形を作成しておく */
-    z-index: -1; /* 画像と背景の間に重ねる */
-    
-}
-  /* rotationという名前のアニメーションを作成 */
-@keyframes rotation {
-    from {  /* 開始時点の装飾 */
-      transform: rotate(0deg);  /* 変形操作の内、回転0度 */
-    }
-  
-    to {  /* 終了時点の装飾 */
-      transform: rotate(360deg); /* 変形操作の内、回転360度 */
-    }
-}
-.circle4 {
-    opacity: 0.1; /* 透明度 */
-    background: rgb(98, 131, 76); /* 縁取りの色設定 */
-    transform-origin: 50% 47%;  /* transformの基準位置を変更 */
-    animation: rotation 5s infinite linear; /* rotationアニメーションの秒数と繰り返し、変化を線形に変更 */
-}
-  
-.circle5 {
-    opacity: 0.3;
-    background: rgb(189, 187, 107);
-    transform-origin: 52% 48%;
-    animation: rotation 12s infinite linear;
-}
-  
-.circle6 {
-    opacity: 0.2;
-    background: rgb(161, 168, 120);
-    transform-origin: 48% 52%;
-    animation: rotation 8s infinite linear;
-}
+
 
 #sec5 {
     border-top: thick double rgb(115, 124, 90);
@@ -273,6 +234,7 @@ figure {
     margin-bottom: 200px;
 }
 #sec5 .sec-head {
+    font-family: Ailerons;
     font-size: 38px;
     font-weight: bold;
     margin-bottom: 80px;
@@ -291,6 +253,7 @@ main{
 }
 
 footer {
+    font-family: Ailerons;
     background-color: rgb(144, 155, 115);
     height: 100px;
     text-align: center;
