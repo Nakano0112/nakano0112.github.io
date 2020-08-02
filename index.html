@@ -10,9 +10,11 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/fixed.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 </head>
 <body>
-    <header class="header">
+    <header id="header">
+        
         <h1 class="logo"><span class="logo-title">PORTFOLIO</span></h1>
         <nav id="menu">
             <ul>
@@ -24,77 +26,131 @@ crossorigin="anonymous"></script>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="works-sec">
+    <main class="scroll-container">
+        <section id="sec2">
             <div class="sec-head">
                 <h1>WORK</h1>
             </div>
-            <p class="sec-read">Production record >></p>
+            <p class="sec-read">【Production record】<br><small>横にスクロール>></small></p>
             <div class="sec-body">
                 <figure>
                     <img src="https://github.com/Nakano0112/nakano0112.github.io/blob/master/img/img02.jpg?raw=true" alt="">
                     <div>【手のデッサン】</div>
-                    <div>鉛筆だけで手を描画</div>
+                    <div>デッサンの授業で鉛筆だけを使用して手を描画</div>
+                    <div><br></div><div><br></div><div><br></div>
+                    <div>2019</div>
+                    <div>制作時間:50分</div>
                 </figure>
                 <figure>
                     <img src="https://github.com/Nakano0112/nakano0112.github.io/blob/master/img/img03.jpg?raw=true" alt="">
                     <div>【イラスト】</div>
                     <div>プライベートで書いているイラスト</div>
+                    <div><br></div><div><br></div>
+                    <div>2020/05</div>
+                    <div>制作時間:30分<br>制作ソフト:ibisPaint</div>
                 </figure>
                 <figure>
                     <img src="https://github.com/Nakano0112/nakano0112.github.io/blob/master/img/img04.jpg?raw=true" alt="">
                     <div>【イラスト】</div>
                     <div>二次創作イラスト</div>
+                    <div><br></div><div><br></div>
+                    <div>2020/04</div>
+                    <div>制作時間:2時間<br>制作ソフト:ibisPaint</div>
                 </figure>
                 <figure>
                     <img src="https://github.com/Nakano0112/nakano0112.github.io/blob/master/img/img05.jpg?raw=true" alt="">
                     <div>【ティーセット】</div>
-                    <div>MAYAを使用してティーセットをCGで制作</div>
+                    <div>MAYAを使用してグループでティーセットを作成したもの</div>
+                    <div><br></div><div><br></div>
+                    <div>2019</div>
+                    <div>制作時間:9時間<br>制作ソフト:MAYA2019</div>
+                </figure>
+                <figure>
+                    <img src="img/CG01.JPG" alt="">
+                    <div>【CG動画】</div>
+                    <div>MAYAを使用して水中で泳ぐ魚のアニメーションを作成</div>
+                    <div><br></div><div><br></div>
+                    <div>2020/07</div>
+                    <div>制作時間:5時間<br>制作ソフト:MAYA2019,Adobe Illustrator2019</div>
+                </figure>
+                <figure>
+                    <img src="img/CG02.JPG" alt="">
+                    <div>【CG動画】</div>
+                    <div>MAYAを使用して差し込む日の光と魚群のアニメーションを作成<br>Arnoldレンダーを使用</div>
+                    <div><br></div>
+                    <div>2020</div>
+                    <div>制作時間:7時間<br>制作ソフト:MAYA2019</div>
+                </figure>
+                <figure>
+                    <img src="img/CG03.JPG" alt="">
+                    <div>【CG動画】</div>
+                    <div>MAYAを使用して水中で泳ぐイルカのアニメーションを作成</div>
+                    <div><br></div><div><br></div>
+                    <div>2020/07</div>
+                    <div>制作時間:5時間<br>制作ソフト:MAYA2019</div>
                 </figure>
             </div>
         </section>
-        <section class="skills-sec">
+        <section id="sec3">
             <div class="sec-head">
                 <h2>SKILL</h2>
             </div>
-            <p class="sec-read">Possible skills</p>
+            <p class="sec-read">【Possible skills】</Possible></p>
             <div class="skill-list">
                 <div class="skill-item">
-                    <p>MAYA<br>Adobe<br>Web<br>Illust
+                    <p>MAYA<br>Adobe Illustrator, Photoshop, Premiere<br>Web<br>Illust
                     </p>
                 </div>
             </div>
         </section>
-        <section class="about-sec">
+        <section id="sec4">
             <div class="sec-head">
                 <h3>ABOUT</h3>
             </div>
             <div class="about-item">
                 <img src="img/img01.JPG" alt="">
-                <p>初めまして</p>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                
+                <p><b>NAME</b> : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中野修也<br>
+                    <b>SCHOOL</b> : &nbsp;愛知工業大学<br>
+                    <b>MAJOR</b> : &nbsp;&nbsp;&nbsp;&nbsp;メディア情報<br><br>
+                    MAYAやAdobeのソフトを使いこなせるように頑張ります！
+                </p>
+                
             </div>
         </section>
-        <section class="contact-sec">
+        <section id="sec5">
             <div class="sec-head">
                 <h4>CONTACT</h4>
             </div>
             <div class="contact-body">
                 <ul>
                     <li class="contact-list">
-                        <a href="img/instagram.png">
+                        <a href="https://www.instagram.com/?hl=ja">
                             <img src="img/instagram.png" alt="">
-                            <span class="contact-name">instagram</span>
+                            
                         </a>
                     </li>
                 </ul>
                 <div class="contact-text">
-                    x19029xx@aitech.ac.jp
+                   MAIL : x19029xx@aitech.ac.jp
                 </div>
             </div>
         </section>    
     </main>
         
     <footer>
+        
+        <div>
+           <ul>
+            <a href="#header">
+                <img class="top-img" src="img/top.png" alt="">
+            </a>
+            
+        </ul> 
+        </div>
         <p>©︎NAKANO PORTFOLIO 2020</p>
     </footer>
 

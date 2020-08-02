@@ -1,11 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-feature-settings: "palt";
 }
-header .logo {
+#header {
+    height: 100%;
+    object-position: center;
+}
+#header .logo {
+    
     text-align: center;
-    color: rgb(124, 150, 109);
+    color: rgb(114, 121, 84);
+    text-shadow:-12px 13px 1px rgba(107, 114, 96, 0.2);
     
 }
 .logo-title {
@@ -19,10 +25,10 @@ header .logo {
   
   }
 
-header h1{
-    line-height: 500px;
-    margin-top: 140px;
-    margin-bottom: 140px;
+#header h1{
+    line-height: 550px;
+    margin-top: 115px;
+    margin-bottom: 115px;
     font-size: 140px;
     
     font-weight: bold;
@@ -36,15 +42,7 @@ body {
     background-color: rgb(243, 236, 225);
     font-family: 'Noto Sans', 游ゴシック体,"Yu Gothic",YuGothic,sans-serif;
 }
-header {
-    margin-bottom: 100px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 80vh;
-    
-}
+
 .fixed {
     position: fixed;
     width: 100%;
@@ -54,7 +52,8 @@ header {
 }
 
 #menu {
-    padding-top: 30px;
+    padding-top: 20px;
+    
 }
 #menu ul{
     
@@ -69,7 +68,7 @@ header {
     width: 500px;
     
     font-size: 20px;
-    color: rgb(231, 228, 220);
+    color: rgb(255, 255, 240);
     background-color: rgb(144, 155, 115);
     text-decoration: none;
     line-height: 1;
@@ -81,6 +80,8 @@ header {
     border-right: 1px solid gray;
     border-top: transparent solid 4px;
     border-bottom:transparent solid 4px;
+
+    
 }
 #menu ul a:hover{
     background-color: rgb(230, 224, 211);
@@ -89,33 +90,221 @@ header {
 }
 
 
-.works-sec .sec-body {
+#sec2 .sec-body {
+    
     overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
     
 }
-.works-sec .sec-body img {
+#sec2 .sec-body img {
+    box-shadow:-10px 11px 1px rgba(169, 175, 164, 0.2);
+    width: 100%;
+    width: 35vw;
+    height: 20vw;
+    object-fit: cover;
+    transition:0.4s all;
+}
+.sec-body img:hover{
+    transform: translate(0px,20px) scale(1.13,1.13);
+    
+    
+    transition:0.3s all;
+}
+#sec2 .sec-head {
+    border-top: thick double rgb(115, 124, 90);
+    padding-top: 80px;
+    margin: 0 0 80px;
+    text-align:  center;
+    font-size: 34px;
+    text-shadow:-5px 6px 1px rgba(169, 175, 164, 0.5);
+}
+
+#sec2 .sec-read {
+    text-align:  center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+figure {
+    /* 横スクロール用 */
+    display: inline-block; 
+    margin: 0 20px 0; 
+}
+
+
+#sec3 {
+    text-align:  center;
+    margin: 100px 0 100px;
+    padding-top: 80px;
+    border-top: thick double rgb(115, 124, 90);
+}
+#sec3 .sec-head {
+    font-size: 34px;
+    margin-bottom: 80px;
+    text-shadow:-5px 6px 1px rgba(169, 175, 164, 0.5);
+}
+#sec3 p {
+    font-size: 20px;
+}
+#sec3 .sec-read {
+    font-weight: bold;
+}
+
+#sec4 {
+    margin: 100px 0 100px;
+    padding-top: 40px;
+    border-top: thick double rgb(115, 124, 90);
+}
+#sec4 .sec-head {
+    text-align:  center;
+    font-size: 37px;
+    font-weight: bold;
+    margin: 40px 0 80px;
+    text-shadow:-5px 6px 1px rgba(169, 175, 164, 0.5);
+    
+}
+#sec4 .about-item {
+    display: flex;
+    font-size: 1.5rem;
+    
+}
+#sec4 .about-item p {
+    margin: 0 50px 0 ;
+}
+#sec4 .about-item img{
     width: 100%;
     width: 40vw;
     height: 30vw;
     object-fit: cover;
-}
-.works-sec .sec-head {
-    font-size: 34px;
-}
-.works-sec .sec-read {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-figure {
-    /* 横スクロール用 */
-    display: inline-block;  
+
 }
 
-section {
-    margin: 150px;
+
+.circle1,
+.circle2,
+.circle3 {
+    position: absolute; /* 縁取り要素は絶対配置 */
+    top: 0; /* .profile-photoの開始位置と揃える */
+    width: 100%;
+    height: 100%;
+    border-radius: 60%; /* 40%の角丸めで歪な形を作成しておく */
+    z-index: -1; /* 画像と背景の間に重ねる */
 }
-main {
-    margin-top: 100px;
+  /* rotationという名前のアニメーションを作成 */
+@keyframes rotation {
+    from {  /* 開始時点の装飾 */
+      transform: rotate(0deg);  /* 変形操作の内、回転0度 */
+    }
+  
+    to {  /* 終了時点の装飾 */
+      transform: rotate(360deg); /* 変形操作の内、回転360度 */
+    }
 }
+.circle1 {
+    opacity: 0.1; /* 透明度 */
+    background: rgb(167, 163, 106); /* 縁取りの色設定 */
+    transform-origin: 50% 47%;  /* transformの基準位置を変更 */
+    animation: rotation 5s infinite linear; /* rotationアニメーションの秒数と繰り返し、変化を線形に変更 */
+}
+  
+.circle2 {
+    opacity: 0.3;
+    background: rgb(214, 203, 138);
+    transform-origin: 52% 48%;
+    animation: rotation 12s infinite linear;
+}
+  
+.circle3 {
+    opacity: 0.2;
+    background: rgb(173, 163, 105);
+    transform-origin: 48% 52%;
+    animation: rotation 8s infinite linear;
+}
+.circle4,
+.circle5,
+.circle6 {
+    
+    margin-top: 150rem;
+    margin-left: -30rem;
+    position: absolute; /* 縁取り要素は絶対配置 */
+    top: 0; /* .profile-photoの開始位置と揃える */
+    width: 100%;
+    height: 100%;
+    border-radius: 200%; /* 40%の角丸めで歪な形を作成しておく */
+    z-index: -1; /* 画像と背景の間に重ねる */
+    
+}
+  /* rotationという名前のアニメーションを作成 */
+@keyframes rotation {
+    from {  /* 開始時点の装飾 */
+      transform: rotate(0deg);  /* 変形操作の内、回転0度 */
+    }
+  
+    to {  /* 終了時点の装飾 */
+      transform: rotate(360deg); /* 変形操作の内、回転360度 */
+    }
+}
+.circle4 {
+    opacity: 0.1; /* 透明度 */
+    background: rgb(98, 131, 76); /* 縁取りの色設定 */
+    transform-origin: 50% 47%;  /* transformの基準位置を変更 */
+    animation: rotation 5s infinite linear; /* rotationアニメーションの秒数と繰り返し、変化を線形に変更 */
+}
+  
+.circle5 {
+    opacity: 0.3;
+    background: rgb(189, 187, 107);
+    transform-origin: 52% 48%;
+    animation: rotation 12s infinite linear;
+}
+  
+.circle6 {
+    opacity: 0.2;
+    background: rgb(161, 168, 120);
+    transform-origin: 48% 52%;
+    animation: rotation 8s infinite linear;
+}
+
+#sec5 {
+    border-top: thick double rgb(115, 124, 90);
+    padding-top: 80px;
+    text-align:  center;
+    margin-bottom: 200px;
+}
+#sec5 .sec-head {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    text-shadow:-5px 6px 1px rgba(169, 175, 164, 0.5);
+}
+#sec5 .contact-body li{
+    list-style: none;
+}
+#sec5 img {
+    width: 100px;
+}
+main{
+    padding: 100px 150px 150px;
+    color: rgb(90, 88, 65);
+    
+}
+
+footer {
+    background-color: rgb(144, 155, 115);
+    height: 100px;
+    text-align: center;
+}
+footer p {
+    
+    color: rgb(249, 250, 239);
+    
+    
+}
+footer .top-img{
+    width: 200px;
+    height: 60px;
+    
+}
+
+
